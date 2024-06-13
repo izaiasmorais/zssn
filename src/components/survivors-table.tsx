@@ -9,14 +9,16 @@ import { SurvivorsTableItem } from "./survivors-table-item";
 
 export function SurvivorsTable() {
 	return (
-		<Table>
-			<TableHeader>
+		<Table className="rounded-md overflow-hidden">
+			<TableHeader className="bg-[#f1f5f9]">
 				<TableRow>
 					<TableHead>Nome</TableHead>
 					<TableHead>Idade</TableHead>
 					<TableHead>Sexo</TableHead>
 					<TableHead>Último Local</TableHead>
+					<TableHead>Pontos</TableHead>
 					<TableHead>Infectado</TableHead>
+					<TableHead></TableHead>
 				</TableRow>
 			</TableHeader>
 
