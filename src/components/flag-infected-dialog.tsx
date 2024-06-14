@@ -10,21 +10,21 @@ import {
 	AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Syringe } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function FlagInfectedDialog() {
 	return (
 		<AlertDialog>
-			<AlertDialogTrigger>
-				<div className="flex items-center gap-2">
+			<AlertDialogTrigger asChild>
+				<Button variant="outline" className="flex items-center gap-2">
 					<Syringe size={20} />
-					Sinalizar Infectado
-				</div>
+					<p>Sinalizar Infectado</p>
+				</Button>
 			</AlertDialogTrigger>
 			<AlertDialogContent>
 				<AlertDialogHeader>
 					<AlertDialogTitle>
-						Tem certeza que quer sinalizar <br />
-						Izaías Lima <br /> como infectado?
+						Tem certeza que quer sinalizar Izaías Lima como infectado?
 					</AlertDialogTitle>
 					<AlertDialogDescription>
 						Isso não pode ser desfeito, vai permanentemente marcá-lo como

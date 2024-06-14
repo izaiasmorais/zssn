@@ -17,7 +17,10 @@ export function SurvivorsTable() {
 					<TableHead>Sexo</TableHead>
 					<TableHead>Último Local</TableHead>
 					<TableHead>Pontos</TableHead>
+
 					<TableHead>Infectado</TableHead>
+					<TableHead></TableHead>
+					<TableHead></TableHead>
 					<TableHead></TableHead>
 				</TableRow>
 			</TableHeader>
