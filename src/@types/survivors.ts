@@ -25,3 +25,9 @@ export interface RegisterSurvivorBody {
 	medication: number;
 	ammunition: number;
 }
+
+export interface UpdateSurvivorLocationBody {
+	id: string;
+	latitude: number;
+	longitude: number;
+}

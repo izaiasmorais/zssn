@@ -1,7 +1,7 @@
 import { TableCell, TableRow } from "@/components/ui/table";
 import { Badge } from "./ui/badge";
 import { FlagInfectedDialog } from "./flag-infected-dialog";
-import { ChangeSurvivorLocationDialog } from "./change-survivor-location-dialog";
+import { UpdateSurvivorLocationDialog } from "./update-survivor-location-dialog";
 import { SurvivorInfoDialog } from "./survivor/survivor-info-dialog";
 import type { Survivor } from "@/@types/survivors";
 
@@ -36,13 +36,13 @@ export function SurvivorsTableItem({ survivor }: SurvivorsTableItemProps) {
 				)}
 			</TableCell>
 			<TableCell className="w-[190px]">
-				<FlagInfectedDialog id={survivor.id} />
+				<FlagInfectedDialog survivor={survivor} />
 			</TableCell>
 			<TableCell className="w-[45px]">
-				<ChangeSurvivorLocationDialog id={survivor.id} />
+				<UpdateSurvivorLocationDialog survivor={survivor} />
 			</TableCell>
 			<TableCell className="w-[45px]">
-				<SurvivorInfoDialog id={survivor.id} />
+				<SurvivorInfoDialog survivor={survivor} />
 			</TableCell>
 		</TableRow>
 	);

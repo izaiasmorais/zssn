@@ -16,22 +16,16 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { flagInfected } from "@/api/flag-infected";
 import { toast } from "sonner";
 import { getSurvivorById } from "@/api/get-survivor-by-id";
+import type { Survivor } from "@/@types/survivors";
 
 interface FlagInfectedDialogProps {
-	id: string;
+	survivor: Survivor;
 }
 
-export function FlagInfectedDialog({ id }: FlagInfectedDialogProps) {
-	const { data: survivor } = useQuery({
-		queryKey: ["survivor"],
-		queryFn: () => getSurvivorById(id),
-	});
-
+export function FlagInfectedDialog({ survivor }: FlagInfectedDialogProps) {
 	const { data, mutateAsync: flagInfectedFn } = useMutation({
-		mutationFn: () => flagInfected({ id }),
+		mutationFn: () => flagInfected({ id: survivor.id }),
 	});
-
-	console.log(data);
 
 	async function handleFlagInfected() {
 		try {
