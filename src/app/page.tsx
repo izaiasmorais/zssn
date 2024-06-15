@@ -10,10 +10,7 @@ export default function Home() {
 				<Summary />
 			</div>
 
-			<div
-				className="w-full max-w-[1400px] border  rounded-lg flex
-			flex-col p-6 gap-4"
-			>
+			<div className="w-full max-w-[1400px] border rounded-lg flex flex-col p-6 gap-4 h-[545px]">
 				<header className="flex items-center justify-between">
 					<div>
 						<h1 className="text-foreground text-2xl font-medium">

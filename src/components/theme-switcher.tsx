@@ -14,9 +14,7 @@ export function ThemeSwitcher() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger className="border w-10 h-10 flex items-center justify-center rounded-md">
-				{theme === "light" && <Sun size={20} />}
-				{theme === "dark" && <Moon size={20} />}
-				{theme === "system" && <Moon size={20} />}
+				<Sun size={20} />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>
 				<DropdownMenuItem

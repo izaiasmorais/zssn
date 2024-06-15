@@ -6,28 +6,26 @@ import { SurvivorInfoDialog } from "./survivor-info-dialog";
 
 export function SurvivorsTableItem() {
 	return (
-		<TableRow className="hover:cursor-pointer">
-			<TableCell>Izaías</TableCell>
-			<TableCell>20</TableCell>
-			<TableCell>Masculino</TableCell>
-			<TableCell>-5.082449323252397, -42.823136360208565</TableCell>
-			<TableCell>10</TableCell>
-
-			<TableCell>
+		<TableRow className="hover:cursor-pointer h-[75px]">
+			<TableCell className="w-[130px]">Izaías</TableCell>
+			<TableCell className="w-[60px]">20</TableCell>
+			<TableCell className="w-[110px]">Masculino</TableCell>
+			<TableCell className="w-[350px]">
+				-5.082449323252397, -42.823136360208565
+			</TableCell>
+			<TableCell className="w-[50px]">10</TableCell>
+			<TableCell className="w-[110px]">
 				<Badge variant="default" className="min-w-[106px]">
 					Não infectado
 				</Badge>
 			</TableCell>
-
-			<TableCell>
+			<TableCell className="w-[190px]">
 				<FlagInfectedDialog />
 			</TableCell>
-
-			<TableCell>
+			<TableCell className="w-[45px]">
 				<ChangeSurvivorLocationDialog />
 			</TableCell>
-
-			<TableCell>
+			<TableCell className="w-[45px]">
 				<SurvivorInfoDialog />
 			</TableCell>
 		</TableRow>
