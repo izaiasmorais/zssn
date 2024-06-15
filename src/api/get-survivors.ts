@@ -1,9 +1,10 @@
+import type { Survivor } from "@/@types/survivors";
 import { api } from "@/lib/axios";
 
-export async function getSurvivors() {
-	await new Promise((resolve) => setTimeout(resolve, 3000));
+export async function getSurvivors(): Promise<Survivor[]> {
+	await new Promise((resolve) => setTimeout(resolve, 1000));
 
-	const survivors = await api.get("/survivors");
+	const response = await api.get<Survivor[]>("/survivors");
 
-	return survivors;
+	return response.data;
 }

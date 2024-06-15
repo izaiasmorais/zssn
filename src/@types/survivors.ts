@@ -1,4 +1,4 @@
-interface Survivor {
+export interface Survivor {
 	id: string;
 	name: string;
 	age: number;
