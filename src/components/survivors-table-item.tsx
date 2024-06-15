@@ -14,7 +14,9 @@ export function SurvivorsTableItem() {
 			<TableCell>10</TableCell>
 
 			<TableCell>
-				<Badge variant="default">Não infectado</Badge>
+				<Badge variant="default" className="min-w-[106px]">
+					Não infectado
+				</Badge>
 			</TableCell>
 
 			<TableCell>

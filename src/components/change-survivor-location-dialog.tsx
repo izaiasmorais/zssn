@@ -33,7 +33,7 @@ export function ChangeSurvivorLocationDialog() {
 				<div className="grid gap-4 py-4">
 					<div className="flex flex-col gap-2 items-start">
 						<Label className="text-right">Localização</Label>
-						<div className="flex items-center gap-1 w-full">
+						<div className="flex items-center gap-2 w-full">
 							<Input id="latitude" type="number" value={-5.082449323252397} />
 							<Input id="longitude" type="number" value={-42.823136360208565} />
 						</div>

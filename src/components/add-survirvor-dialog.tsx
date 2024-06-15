@@ -52,7 +52,7 @@ export function AddSurvivorDialog() {
 							variant="outline"
 							type="single"
 							id="gender"
-							className="w-full"
+							className="w-full flex gap-2"
 						>
 							<ToggleGroupItem value="male" className="w-full">
 								Masculino
@@ -65,7 +65,7 @@ export function AddSurvivorDialog() {
 
 					<div className="flex flex-col gap-2 items-start">
 						<Label className="text-right">Localização</Label>
-						<div className="flex items-center gap-1 w-full">
+						<div className="flex items-center gap-2 w-full">
 							<Input id="latitude" type="number" placeholder="Latitude" />
 							<Input id="longitude" type="number" placeholder="Longitude" />
 						</div>
@@ -124,7 +124,9 @@ export function AddSurvivorDialog() {
 				</div>
 				<DialogFooter>
 					<DialogClose>
-						<Button type="button" variant="outline">Cancelar</Button>
+						<Button type="button" variant="outline">
+							Cancelar
+						</Button>
 					</DialogClose>
 					<Button type="submit">Confirmar</Button>
 				</DialogFooter>

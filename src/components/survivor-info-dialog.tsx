@@ -2,15 +2,12 @@ import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
-	DialogDescription,
-	DialogFooter,
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Eye } from "lucide-react";
+import { Badge } from "./ui/badge";
 
 export function SurvivorInfoDialog() {
 	return (
@@ -22,23 +19,72 @@ export function SurvivorInfoDialog() {
 			</DialogTrigger>
 			<DialogContent className="sm:max-w-[425px]">
 				<DialogHeader>
-					<DialogTitle>Alterar Localização</DialogTitle>
-					<DialogDescription>
-						Make changes to your profile here. Click save when you're done.
-					</DialogDescription>
+					<DialogTitle>Informações</DialogTitle>
 				</DialogHeader>
 				<div className="grid gap-4 py-4">
-					<div className="flex flex-col gap-2 items-start">
-						<Label className="text-right">Localização</Label>
-						<div className="flex items-center gap-1 w-full">
-							<Input id="latitude" type="number" placeholder="Latitude" />
-							<Input id="longitude" type="number" placeholder="Longitude" />
-						</div>
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Nome</span>
+						<strong>Izaías Lima</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Idade</span>
+						<strong>20</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Sexo</span>
+						<strong>Masculino</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Localização</span>
+						<strong>-5.082449323252397, -42.823136360208565</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Estado</span>
+						<strong>
+							<Badge variant="default">Não infectado</Badge>
+						</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">
+							Sinalizações de Infectado
+						</span>
+						<strong>2/3</strong>
+					</div>
+
+					<h1 className="text-medium font-medium text-muted-foreground">
+						Quantidade de Suprimentos:
+					</h1>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Água</span>
+						<strong>4</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Alimentos</span>
+						<strong>7</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Medicamentos</span>
+						<strong>2</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Munição</span>
+						<strong>23</strong>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<span className="text-muted-foreground text-xs">Pontos Totais</span>
+						<strong>64</strong>
 					</div>
 				</div>
-				<DialogFooter>
-					<Button type="submit">Save changes</Button>
-				</DialogFooter>
 			</DialogContent>
 		</Dialog>
 	);
