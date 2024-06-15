@@ -39,7 +39,11 @@ export function SurvivorsTable() {
 						return <SurvivorsTableItemSkeleton key={index} />;
 					})}
 
-				{!isLoadingSurvivors && survivors && <SurvivorsTableItem />}
+				{!isLoadingSurvivors &&
+					survivors &&
+					survivors.map((survivor) => {
+						return <SurvivorsTableItem key={survivor.id} survivor={survivor} />;
+					})}
 			</TableBody>
 		</Table>
 	);

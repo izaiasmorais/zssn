@@ -3,30 +3,46 @@ import { Badge } from "./ui/badge";
 import { FlagInfectedDialog } from "./flag-infected-dialog";
 import { ChangeSurvivorLocationDialog } from "./change-survivor-location-dialog";
 import { SurvivorInfoDialog } from "./survivor-info-dialog";
+import type { Survivor } from "@/@types/survivors";
 
-export function SurvivorsTableItem() {
+interface SurvivorsTableItemProps {
+	survivor: Survivor;
+}
+
+export function SurvivorsTableItem({ survivor }: SurvivorsTableItemProps) {
 	return (
 		<TableRow className="hover:cursor-pointer h-[75px]">
-			<TableCell className="w-[130px]">Izaías</TableCell>
-			<TableCell className="w-[60px]">20</TableCell>
-			<TableCell className="w-[110px]">Masculino</TableCell>
+			<TableCell className="w-[130px]">{survivor.name}</TableCell>
+			<TableCell className="w-[60px]">{survivor.age}</TableCell>
+			<TableCell className="w-[110px]">{survivor.gender}</TableCell>
 			<TableCell className="w-[350px]">
-				-5.082449323252397, -42.823136360208565
+				{survivor.latitude}, {survivor.longitude}
 			</TableCell>
-			<TableCell className="w-[50px]">10</TableCell>
+			<TableCell className="w-[50px]">{survivor.points}</TableCell>
 			<TableCell className="w-[110px]">
-				<Badge variant="default" className="min-w-[106px]">
-					Não infectado
-				</Badge>
+				{survivor.infected === false && (
+					<Badge variant="default" className="min-w-[106px]">
+						Não Infectado
+					</Badge>
+				)}
+
+				{survivor.infected === true && (
+					<Badge
+						variant="destructive"
+						className="flex justify-center min-w-[106px]"
+					>
+						Infectado
+					</Badge>
+				)}
 			</TableCell>
 			<TableCell className="w-[190px]">
-				<FlagInfectedDialog />
+				<FlagInfectedDialog id={survivor.id} />
 			</TableCell>
 			<TableCell className="w-[45px]">
-				<ChangeSurvivorLocationDialog />
+				<ChangeSurvivorLocationDialog id={survivor.id} />
 			</TableCell>
 			<TableCell className="w-[45px]">
-				<SurvivorInfoDialog />
+				<SurvivorInfoDialog id={survivor.id} />
 			</TableCell>
 		</TableRow>
 	);

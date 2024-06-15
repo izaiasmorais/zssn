@@ -9,7 +9,11 @@ import {
 import { Eye } from "lucide-react";
 import { Badge } from "./ui/badge";
 
-export function SurvivorInfoDialog() {
+interface SurvivorInfoDialogProps {
+	id: string;
+}
+
+export function SurvivorInfoDialog({ id }: SurvivorInfoDialogProps) {
 	return (
 		<Dialog>
 			<DialogTrigger asChild>

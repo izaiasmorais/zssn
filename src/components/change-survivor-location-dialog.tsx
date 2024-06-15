@@ -13,7 +13,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SquarePen } from "lucide-react";
 
-export function ChangeSurvivorLocationDialog() {
+interface ChangeSurvivorLocationDialogProps {
+	id: string;
+}
+
+export function ChangeSurvivorLocationDialog({
+	id,
+}: ChangeSurvivorLocationDialogProps) {
 	return (
 		<Dialog>
 			<DialogTrigger asChild>

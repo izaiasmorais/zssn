@@ -1,5 +1,3 @@
-
-
 ## 📃 Sobre o projeto
 
 ZSSN (Rede Social de Sobrevivência Zumbi). O mundo como o conheceu caiu
