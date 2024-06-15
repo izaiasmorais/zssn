@@ -10,7 +10,7 @@ import { SurvivorsTableItem } from "./survivors-table-item";
 export function SurvivorsTable() {
 	return (
 		<Table className="rounded-md overflow-hidden">
-			<TableHeader className="bg-[#f1f5f9]">
+			<TableHeader className="bg-muted">
 				<TableRow>
 					<TableHead>Nome</TableHead>
 					<TableHead>Idade</TableHead>

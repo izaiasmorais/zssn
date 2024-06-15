@@ -1,6 +1,7 @@
 import { AddSurvivorDialog } from "@/components/add-survirvor-dialog";
 import { Summary } from "@/components/summary";
 import { SurvivorsTable } from "@/components/survivors-table";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function Home() {
 	return (
@@ -10,7 +11,7 @@ export default function Home() {
 			</div>
 
 			<div
-				className="w-full max-w-[1400px] border border-slate-300 rounded-lg flex
+				className="w-full max-w-[1400px] border  rounded-lg flex
 			flex-col p-6 gap-4"
 			>
 				<header className="flex items-center justify-between">
@@ -23,7 +24,10 @@ export default function Home() {
 						</p>
 					</div>
 
-					<AddSurvivorDialog />
+					<div className="flex items-center gap-2">
+						<ThemeSwitcher />
+						<AddSurvivorDialog />
+					</div>
 				</header>
 
 				<SurvivorsTable />
