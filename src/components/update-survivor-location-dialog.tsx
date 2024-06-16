@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Loader2, SquarePen } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -26,12 +26,17 @@ interface UpdateSurvivorLocationDialogProps {
 export function UpdateSurvivorLocationDialog({
 	survivor,
 }: UpdateSurvivorLocationDialogProps) {
+	const queryClient = useQueryClient();
+
 	const [latitude, setLatitude] = useState<number>(survivor.latitude);
 	const [longitude, setLongitude] = useState<number>(survivor.longitude);
 
 	const { mutateAsync: updateSurvivorLocationFn, isPending } = useMutation({
 		mutationFn: () =>
 			updateSurvivorLocation({ id: survivor.id, latitude, longitude }),
+		onSuccess: () => {
+			queryClient.invalidateQueries({ queryKey: ["survivors"] });
+		},
 	});
 
 	async function handleUpdateSurvivorLocation() {

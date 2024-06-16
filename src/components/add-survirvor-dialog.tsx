@@ -27,7 +27,7 @@ export function AddSurvivorDialog() {
 	const { mutateAsync: registerSurvivorFn } = useMutation({
 		mutationFn: registerSurvivor,
 		onSuccess: () => {
-			queryClient.invalidateQueries({ queryKey: ["survivors"] });
+			queryClient.invalidateQueries({ queryKey: ["survivors", "summary"] });
 		},
 	});
 

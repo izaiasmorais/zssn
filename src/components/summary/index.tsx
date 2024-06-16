@@ -19,12 +19,16 @@ export function Summary() {
 			<div className="flex w-full gap-4 md:flex-nowrap flex-wrap">
 				<Card className="p-6 flex flex-col gap-4 w-full">
 					<span>Não infectados</span>
-					<strong className="text-4xl">{summary.nonInfectedPercentage}%</strong>
+					<strong className="text-4xl">
+						{summary.nonInfectedPercentage.toFixed(1)}%
+					</strong>
 				</Card>
 
 				<Card className="p-6 flex flex-col gap-4 w-full">
 					<span>Infectados</span>
-					<strong className="text-4xl">{summary.infectedPercentage}%</strong>
+					<strong className="text-4xl">
+						{summary.infectedPercentage.toFixed(1)}%
+					</strong>
 				</Card>
 
 				<Card className="p-6 flex flex-col gap-4 w-full">
@@ -36,20 +40,20 @@ export function Summary() {
 					<span>Itens por sobrevivente</span>
 					<div className="flex flex-col">
 						<span className="text-xs">
-							<span className="font-semibold">Água:</span>
-							{summary.averageItemsPerSurvivor.water}
+							<span className="font-semibold">Água:</span>{" "}
+							{summary.averageItemsPerSurvivor.water.toFixed(1)}
 						</span>
 						<span className="text-xs">
-							<span className="font-semibold">Alimentos:</span>
-							{summary.averageItemsPerSurvivor.food}
+							<span className="font-semibold">Alimentos:</span>{" "}
+							{summary.averageItemsPerSurvivor.food.toFixed(1)}
 						</span>
 						<span className="text-xs">
-							<span className="font-semibold">Medicamentos:</span>
-							{summary.averageItemsPerSurvivor.medication}
+							<span className="font-semibold">Medicamentos:</span>{" "}
+							{summary.averageItemsPerSurvivor.medication.toFixed(1)}
 						</span>
 						<span className="text-xs">
-							<span className="font-semibold">Munição:</span>
-							{summary.averageItemsPerSurvivor.ammunition}
+							<span className="font-semibold">Munição:</span>{" "}
+							{summary.averageItemsPerSurvivor.ammunition.toFixed(1)}
 						</span>
 					</div>
 				</Card>

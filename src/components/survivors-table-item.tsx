@@ -21,7 +21,7 @@ export function SurvivorsTableItem({ survivor }: SurvivorsTableItemProps) {
 			<TableCell className="w-[50px]">{survivor.points}</TableCell>
 			<TableCell className="w-[110px]">
 				{survivor.infected === false && (
-					<Badge variant="default" className="min-w-[106px]">
+					<Badge variant="default" className="w-[106px]">
 						Não Infectado
 					</Badge>
 				)}
@@ -29,7 +29,7 @@ export function SurvivorsTableItem({ survivor }: SurvivorsTableItemProps) {
 				{survivor.infected === true && (
 					<Badge
 						variant="destructive"
-						className="flex justify-center min-w-[106px]"
+						className="flex justify-center w-[106px]"
 					>
 						Infectado
 					</Badge>
